@@ -8,28 +8,32 @@
 import UIKit
 
 protocol Delegate: class {
-    // スイッチがONにされたときに実行されるメソッド
+    // スイッチがonにされたときに実行されるメソッド
     func didSwitchOn()
-    // スイッチがOFFにされたときに実行されるメソッド
+    // スイッチがoffにされたときに実行されるメソッド
     func didSwitchOff()
 }
 
 class TableViewCell: UITableViewCell {
 
     var delegate: Delegate?
-    var isOptional: Bool = false
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var uiSwitch: UISwitch!
 
-    @IBAction func didChangeduiSwitch(_ sender: UISwitch) {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+        
+        // switchを最初全てoffにしておく
+        uiSwitch.isOn = false
+    }
+    
+    @IBAction func changeSwitch(_ sender: UISwitch) {
         if sender.isOn {
             delegate?.didSwitchOn()
-            print("onになった")
         } else {
             delegate?.didSwitchOff()
-            print("offになった")
         }
     }
-
 }

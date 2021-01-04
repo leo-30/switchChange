@@ -34,7 +34,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //タグの値にindexPath.rowを入れる
         cell.uiSwitch.tag = indexPath.row
         //スイッチが押されたときの動作
-        cell.uiSwitch.addTarget(self, action: #selector(fundlSwitch(_:)), for: UIControl.Event.valueChanged)
+        cell.uiSwitch.addTarget(self, action: #selector(changeSwitch(_:)), for: UIControl.Event.valueChanged)
         
         return cell
     }
@@ -48,11 +48,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return 80
     }
     
-    //MARK:- *****
-    
-    @objc func fundlSwitch(_ sender: UISwitch) {
-        print(sender.tag)
-        print(sender.isOn)
+    @objc func changeSwitch(_ sender: UISwitch) {
+        // sender.tagにはswitchのセルの位置が入る(Int)
+        // sender.isOnにはswitchのon/off情報が入る(Bool)
+        // 下のprint文はセル内のラベルの内容とswitchのT/F
+        print(cellContents[sender.tag] + "が\(sender.isOn)になった")
     }
 }
 

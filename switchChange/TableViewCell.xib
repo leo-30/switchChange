@@ -27,7 +27,7 @@
                         <rect key="frame" x="255" y="7" width="49" height="31"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <connections>
-                            <action selector="didChangeduiSwitch:" destination="KGk-i7-Jjw" eventType="valueChanged" id="eZ6-RN-28M"/>
+                            <action selector="changeSwitch:" destination="KGk-i7-Jjw" eventType="valueChanged" id="gbt-LB-hnt"/>
                         </connections>
                     </switch>
                 </subviews>
