@@ -19,7 +19,7 @@ print文でコンソールに以下のように出力する
 →(セル内のラベルのテキスト)が(trueかfalse)になった
 
 動画だと以下のようになります。
-![changeSwitch](https://user-images.githubusercontent.com/40350775/103522037-1e5b0880-4ebd-11eb-98c3-0a12daa78436.gif)
+![changeSwitch](https://user-images.githubusercontent.com/40350775/103523532-52372d80-4ebf-11eb-83d8-83b78c1f8010.gif)
 
 ## カスタムセルの準備
 まずカスタムセルを作ります。
