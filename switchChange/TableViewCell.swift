@@ -7,20 +7,11 @@
 
 import UIKit
 
-protocol Delegate: class {
-    // スイッチがonにされたときに実行されるメソッド
-    func didSwitchOn()
-    // スイッチがoffにされたときに実行されるメソッド
-    func didSwitchOff()
-}
-
 class TableViewCell: UITableViewCell {
-
-    var delegate: Delegate?
-
+    
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var uiSwitch: UISwitch!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,11 +20,12 @@ class TableViewCell: UITableViewCell {
         uiSwitch.isOn = false
     }
     
+    // switchが押された時に呼ばれる
     @IBAction func changeSwitch(_ sender: UISwitch) {
-        if sender.isOn {
-            delegate?.didSwitchOn()
-        } else {
-            delegate?.didSwitchOff()
-        }
+                    if sender.isOn {
+                        print("on")
+                    } else {
+                        print("off")
+                    }
     }
 }
