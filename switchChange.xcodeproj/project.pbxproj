@@ -63,12 +63,12 @@
 				35C69F01259DAE88006ACDCE /* AppDelegate.swift */,
 				35C69F03259DAE88006ACDCE /* SceneDelegate.swift */,
 				35C69F05259DAE88006ACDCE /* ViewController.swift */,
+				35C69F16259DAEF5006ACDCE /* TableViewCell.swift */,
+				35C69F17259DAEF5006ACDCE /* TableViewCell.xib */,
 				35C69F07259DAE88006ACDCE /* Main.storyboard */,
 				35C69F0A259DAE8C006ACDCE /* Assets.xcassets */,
 				35C69F0C259DAE8C006ACDCE /* LaunchScreen.storyboard */,
 				35C69F0F259DAE8C006ACDCE /* Info.plist */,
-				35C69F16259DAEF5006ACDCE /* TableViewCell.swift */,
-				35C69F17259DAEF5006ACDCE /* TableViewCell.xib */,
 			);
 			path = switchChange;
 			sourceTree = "<group>";

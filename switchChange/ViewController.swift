@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // 余分なセルを描画しないようにする
         table.tableFooterView = UIView()
         
-        //使うセルにxibファイルを指定
+        // 使うxibファイルを指定
         table.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
     }
     
@@ -38,17 +38,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         // セルのラベルに配列の中身を順番に表示
         cell.label.text = cellContents[indexPath.row]
-        //switchのタグにindexPath.rowの値を入れる
+        // スイッチのタグにindexPath.rowの値を入れる
         cell.uiSwitch.tag = indexPath.row
-        //スイッチが押されたときの動作
+        // スイッチが押されたときの動作
         cell.uiSwitch.addTarget(self, action: #selector(changeSwitch(_:)), for: UIControl.Event.valueChanged)
         
         return cell
     }
     
-    //セルが押された時に呼ばれるメソッド
+    // セルが押された時に呼ばれるメソッド
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("\(indexPath.row)が選ばれました！")
+        print("\(indexPath.row)番目のセルが選ばれた")
     }
     
     // セルの幅を80に設定
@@ -58,9 +58,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @objc func changeSwitch(_ sender: UISwitch) {
         /*
-         sender.tagにはswitchのセルの位置が入る(Int)
-         sender.isOnにはswitchのon/off情報が入る(Bool)
-         下のprint文はセル内のラベルの内容とswitchのTrue/False
+         sender.tagにはスイッチのセルの位置が入る(Int)
+         sender.isOnにはスイッチのon/off情報が入る(Bool)
+         下のprint文はセル内のラベルの内容とスイッチのTrue/False
          */
         print(cellContents[sender.tag] + "が\(sender.isOn)になった")
     }

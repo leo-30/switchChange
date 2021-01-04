@@ -16,16 +16,16 @@ class TableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        // switchを最初全てoffにしておく
+        // スイッチを最初全てoffにしておく
         uiSwitch.isOn = false
     }
     
-    // switchが押された時に呼ばれる
+    // スイッチが押された時に呼ばれる
     @IBAction func changeSwitch(_ sender: UISwitch) {
-                    if sender.isOn {
-                        print("on")
-                    } else {
-                        print("off")
-                    }
+        if sender.isOn {
+            print("on")
+        } else {
+            print("off")
+        }
     }
 }
