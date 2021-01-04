@@ -1,6 +1,6 @@
 # UISwitchとカスタムセルのサンプルアプリ
 
-これはQiitaの記事[【Swift5】カスタムセル内のSwitchのON/OFFをセルごとに認識する](https://qiita.com/leo_rabbit30/items/1637e20fc62841ff68db)と同じ内容と同じになっています。
+これはQiitaの記事[【Swift5】カスタムセル内のSwitchのON/OFFをセルごとに認識する](https://qiita.com/leo_rabbit30/items/1637e20fc62841ff68db)の内容と同じになっています。
 
 ## はじめに
 最近、TableView上のSwitchを押した時にその中の設定を有効にする、みたいなよく見かけるものを作ろうとしたのですが、調べてもなかなかちゃんと動くコードに出会えませんでした。そこで今回は、とりあえず目的を達成できるくらいには動いたコードについてまとめてみようと思います。
