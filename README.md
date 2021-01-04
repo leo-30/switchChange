@@ -9,6 +9,18 @@
 - Xcode：12.3
 - Swift：5.3.2
 
+## 今回実装する内容
+print文でコンソールに以下のように出力する
+
+- セル内でタップする  
+→(セル番号)番目のセルが選ばれた
+- セル内のswitchをタップする  
+→(on/off)  
+→(セル内のラベルのテキスト)が(trueかfalse)になった
+
+動画だと以下のようになります。
+![changeSwitch](https://user-images.githubusercontent.com/40350775/103522037-1e5b0880-4ebd-11eb-98c3-0a12daa78436.gif)
+
 ## カスタムセルの準備
 まずカスタムセルを作ります。
 
@@ -122,16 +134,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 次にStoryboardの方も編集していきます。こちらも関連付けも忘れずに。
 ![スクリーンショット 2021-01-04 14.31.27.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/393540/f77b5d3e-7b66-a4b0-e965-7fc2347d6a07.png)
 
-## 想定される挙動
-print文でコンソールに表示される内容
-
-- セル内でタップする  
-→(セル番号)番目のセルが選ばれた
-- セル内のswitchをタップする  
-→(on/off)  
-→(セル内のラベルのテキスト)が(trueかfalse)になった
+## まとめ
 
 応用すれば大体のことはできそうな気がします。
+全く同じ内容のプロジェクトは[こちら](https://github.com/leo-30/switchChange)
 
 ## 参考サイト
 [cell内のswitchの切り替え時にCell内のテキストを出力したい](https://teratail.com/questions/176704)
